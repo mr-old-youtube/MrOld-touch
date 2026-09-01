@@ -151,11 +151,30 @@ Do chuẩn bảo mật của Apple, mỗi máy Mac mới cần được cấp qu
 
 ---
 
+## 🔄 HƯỚNG DẪN CẬP NHẬT PHIÊN BẢN MỚI
+
+Khi có bản cập nhật mới, bạn có thể nâng cấp nhanh chóng bằng 1 trong 2 cách sau:
+
+### ⚡ Cách 1: Nâng cấp trực tiếp bằng câu lệnh (Khuyên dùng — 2 giây)
+Mở Terminal và gõ:
+```bash
+tinytouch update
+```
+Phần mềm sẽ tự động tải bản mới nhất từ GitHub Releases và cài đặt vào máy của bạn.
+
+### 🌐 Cách 2: Cập nhật bằng 1 dòng lệnh Terminal duy nhất (Không cần tải file)
+```bash
+curl -sL https://github.com/mr-old-youtube/MrOld-touch/releases/latest/download/tinytouch-macos.zip -o /tmp/tinytouch.zip && unzip -qo /tmp/tinytouch.zip -d /tmp/tinytouch_update && /tmp/tinytouch_update/tinytouch --version
+```
+
+---
+
 ## 📖 BẢNG TRA CỨU CÁC LỆNH QUẢN LÝ THƯỜNG DÙNG
 
 | Thao tác | Câu lệnh trong Terminal (Lưu ý có dấu `./` ở đầu) |
 | :--- | :--- |
 | **Cài đặt trọn gói thiết bị** | `./tinytouch setup` |
+| **Cập nhật lên bản mới nhất** | `tinytouch update` |
 | **Thêm máy Mac mới (Chế độ PIV)** | `./tinytouch add-computer` *(hoặc `./tinytouch pair`)* |
 | **Chuyển sang chế độ tự gõ pass (Khuyên dùng)** | `./tinytouch mode hid` |
 | **Chuyển sang chế độ SmartCard** | `./tinytouch mode piv` |
@@ -195,4 +214,5 @@ Do chuẩn bảo mật của Apple, mỗi máy Mac mới cần được cấp qu
 
 #### 4. Thiết bị có lưu mật khẩu của tôi an toàn không?
 > 🛡️ **Tuyệt đối an toàn!** Mật khẩu được mã hóa phần cứng chuẩn **XTS-AES 256-bit** trực tiếp trong bộ nhớ Flash của chip. Kể cả khi có người tháo rời cảm biến hoặc can thiệp vật lý cũng không thể đọc trộm được mật khẩu.
+
 
