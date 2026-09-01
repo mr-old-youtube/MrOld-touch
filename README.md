@@ -2,7 +2,6 @@
 
 Chào mừng bạn đến với **tinyTouch** — Thiết bị xác thực cảm biến vân tay cao cấp mở khóa 1 chạm siêu tốc dành cho hệ điều hành **macOS** (MacBook, Mac mini, Mac Studio, iMac).
 Link mua  https://s.shopee.vn/6Akenn3gQu
-
 ---
 
 ## 🎯 TÍNH NĂNG NỔI BẬT
@@ -121,7 +120,7 @@ tinyTouch hỗ trợ 2 chế độ hoạt động linh hoạt, bạn có thể c
   ```
 
 ### 2. Chế độ PIV (Smart Card chuẩn Apple)
-* **Ưu điểm:** Máy Mac nhận diện tinyTouch là Thẻ thông minh SmartCard bảo mật, xác thực qua chứng chỉ mã hóa.
+* **Ưu điểm:** Máy Mac nhận diện tinyTouch là Thẻ thông minh SmartCard bảo mật, xác thực qua chứng chỉ mã hóa phần cứng.
 * **Hạn chế:** Chỉ hỗ trợ mở khóa màn hình Mac và lệnh `sudo` trong Terminal.
 * **Cách chuyển:**
   ```bash
@@ -130,11 +129,34 @@ tinyTouch hỗ trợ 2 chế độ hoạt động linh hoạt, bạn có thể c
 
 ---
 
+## 💻 HƯỚNG DẪN DÙNG TINYTOUCH TRÊN NHIỀU MÁY TÍNH KHÁC NHAU
+
+Bạn có thể dùng **1 chiếc tinyTouch** duy nhất để mở khóa và làm việc trên **nhiều máy tính khác nhau**:
+
+### 🛡️ 1. Khi ở chế độ PIV (Dùng trên nhiều máy Mac):
+Do chuẩn bảo mật của Apple, mỗi máy Mac mới cần được cấp quyền ghép đôi (Pair) **đúng 1 lần đầu tiên**:
+1. Cắm tinyTouch vào máy Mac mới.
+2. Tải và giải nén `tinytouch-macos.zip` trên máy Mac mới.
+3. Mở Terminal tại thư mục vừa giải nén và chạy lệnh:
+   ```bash
+   ./tinytouch add-computer
+   ```
+   *(Hoặc `./tinytouch pair`)*.
+4. Nhập mật khẩu máy Mac mới khi được hỏi để xác nhận cấp quyền.
+5. 👉 **Xong!** Từ lần sau cắm vào máy Mac đó, chỉ cần chạm vân tay là máy nhận diện SmartCard và tự động đăng nhập ngay lập tức.
+
+### ⌨️ 2. Khi ở chế độ HID (Cắm là dùng trên Mac, Windows, Linux):
+* **100% Cắm là nhận (Plug & Play)**: Không cần cài đặt phần mềm hay gõ bất kỳ lệnh nào trên máy tính mới.
+* Cắm tinyTouch vào bất kỳ máy Mac, laptop Windows hay PC nào $\rightarrow$ Chạm ngón tay là thiết bị tự động gõ mật khẩu mở máy ngay!
+
+---
+
 ## 📖 BẢNG TRA CỨU CÁC LỆNH QUẢN LÝ THƯỜNG DÙNG
 
 | Thao tác | Câu lệnh trong Terminal (Lưu ý có dấu `./` ở đầu) |
 | :--- | :--- |
 | **Cài đặt trọn gói thiết bị** | `./tinytouch setup` |
+| **Thêm máy Mac mới (Chế độ PIV)** | `./tinytouch add-computer` *(hoặc `./tinytouch pair`)* |
 | **Chuyển sang chế độ tự gõ pass (Khuyên dùng)** | `./tinytouch mode hid` |
 | **Chuyển sang chế độ SmartCard** | `./tinytouch mode piv` |
 | **Xem 5 khe vân tay & Mật khẩu** | `./tinytouch slots` |
@@ -173,3 +195,4 @@ tinyTouch hỗ trợ 2 chế độ hoạt động linh hoạt, bạn có thể c
 
 #### 4. Thiết bị có lưu mật khẩu của tôi an toàn không?
 > 🛡️ **Tuyệt đối an toàn!** Mật khẩu được mã hóa phần cứng chuẩn **XTS-AES 256-bit** trực tiếp trong bộ nhớ Flash của chip. Kể cả khi có người tháo rời cảm biến hoặc can thiệp vật lý cũng không thể đọc trộm được mật khẩu.
+
