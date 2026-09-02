@@ -22,7 +22,40 @@ Link mua  https://s.shopee.vn/6Akenn3gQu
 
 ---
 
-## 🚀 QUY TRÌNH CÀI ĐẶT LẦN ĐẦU (CHỈ 1 PHÚT)
+## 🌐 CÁCH 1: KHỞI TẠO QUA TRÌNH DUYỆT WEB (CHO WINDOWS, LINUX & CHẾ ĐỘ HID)
+*(⚡ 100% Không cần cài phần mềm — Khuyên dùng cho Windows & người dùng chỉ thích tự gõ mật khẩu)*
+
+Nếu bạn sử dụng **Windows**, **Linux** hoặc trên Mac chỉ muốn dùng chế độ **Tự gõ mật khẩu (HID)**:
+
+### 📌 Bước 1: Cắm tinyTouch vào cổng USB máy tính
+* Windows 10/11, macOS và Linux sẽ tự động nhận diện thiết bị ngay lập tức (không cần cài thêm driver).
+
+### 📌 Bước 2: Mở Web Controller
+* Mở trình duyệt (Google Chrome, Microsoft Edge, Opera, Cốc Cốc) và truy cập:
+  👉 **[https://touch.mrold.xyz/](https://touch.mrold.xyz/)**
+
+### 📌 Bước 3: Bấm kết nối thiết bị
+1. Bấm nút **"Kết nối thiết bị"** ở góc trên cùng bên phải.
+2. Trên cửa sổ popup của trình duyệt, chọn dòng **`tinyTouch`** (hoặc `USB Serial Device / COM...`) $\rightarrow$ Bấm **Connect**.
+3. *Giao diện sẽ chuyển sang màu xanh lá báo "Đã kết nối tinyTouch" và hiển thị trạng thái thiết bị.*
+
+### 📌 Bước 4: Đăng ký vân tay & Cài mật khẩu mở máy
+1. **Quét vân tay chính (Slot 1):**
+   * Bấm nút **"👆 Quét ngón"** tại Slot 1.
+   * Đặt ngón tay lên cảm biến lần 1 $\rightarrow$ Nhấc ngón tay ra $\rightarrow$ Đặt lại lần 2 $\rightarrow$ Báo `✓ Đã quét vân tay`.
+2. **Cài mật khẩu mở máy:**
+   * Bấm nút **"🔑 Đặt pass"** tại Slot 1.
+   * Nhập mã PIN hoặc mật khẩu mở máy tính của bạn $\rightarrow$ Bấm **"Lưu mật khẩu"**.
+   * Chạm nhẹ vân tay vào cảm biến để xác nhận lưu an toàn trực tiếp vào chip.
+3. **Kiểm tra chế độ:**
+   * Mặc định thiết bị xuất xưởng đã ở sẵn **🟢 HID Keyboard**. Nếu đang ở PIV, bạn chỉ cần bấm nút **"Chuyển sang HID"**.
+
+🎉 **HOÀN TẤT!** Bây giờ mỗi khi khóa màn hình (`Win + L` trên Windows hoặc `Cmd + Ctrl + Q` trên Mac), bạn chỉ cần **chạm nhẹ vân tay vào cảm biến** là thiết bị tự động gõ mật khẩu và nhấn Enter mở máy tức thì!
+
+---
+
+## 💻 CÁCH 2: CÀI ĐẶT TRỌN GÓI BẰNG ỨNG DỤNG CHO MACOS (CLI)
+*(Dành cho người dùng Mac muốn tích hợp sâu SmartCard PIV hoặc cài đặt qua Terminal)*
 
 ### 📌 Bước 1: Tải về và giải nén
 * 👉 **Link tải bản mới nhất:** [**Tải tinytouch-macos.zip (Bản mới nhất)**](https://github.com/mr-old-youtube/MrOld-touch/releases/latest/download/tinytouch-macos.zip)
