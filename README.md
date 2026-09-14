@@ -6,6 +6,7 @@ Link mua  https://s.shopee.vn/6Akenn3gQu
 
 ## 🎯 TÍNH NĂNG NỔI BẬT
 * ⚡ **Mở khóa Mac 1 chạm:** Chạm nhẹ ngón tay để mở khóa màn hình ngay tức thì.
+* ⌨️ **Tùy biến phím kết thúc & độ trễ:** Linh hoạt cấu hình phím tự động nhấn sau khi gõ mật khẩu (Enter, Tab, phím kép `enter,space`, `tab,enter`) và tinh chỉnh độ trễ từ 0 đến 5000ms.
 * 🔑 **Tự động điền mật khẩu:** Hỗ trợ đăng nhập Apple Passwords, Keychain, Safari, 1Password, Bitwarden, trình duyệt Web...
 * 🖐️ **Đa tài khoản (5 Ngón tay - 5 Mật khẩu):** Mỗi ngón tay có thể mở một mật khẩu/tài khoản khác nhau.
 * 🛡️ **Phê duyệt quyền Admin:** Xác thực nhanh khi cài ứng dụng, phân quyền hệ thống hoặc lệnh `sudo` trong Terminal.
@@ -162,6 +163,32 @@ tinyTouch hỗ trợ 2 chế độ hoạt động linh hoạt, bạn có thể c
 
 ---
 
+## ⌨️ TÙY BIẾN PHÍM BẤM KẾT THÚC & ĐỘ TRỄ (POST-KEY & DELAY)
+
+Sau khi gõ xong mật khẩu, tinyTouch có thể tự động gõ thêm phím bấm hoặc chuỗi phím theo ý bạn:
+
+1. **Xem cấu hình phím kết thúc hiện tại:**
+   ```bash
+   ./tinytouch post-key
+   ```
+2. **Đổi phím kết thúc (Enter, Tab, Space hoặc Không bấm phím nào):**
+   ```bash
+   ./tinytouch post-key enter          # Mặc định: Gõ Enter để đăng nhập ngay
+   ./tinytouch post-key tab            # Nhấn Tab (chuyển sang ô tiếp theo)
+   ./tinytouch post-key none           # Chỉ gõ mật khẩu, không bấm thêm phím nào
+   ```
+3. **Gõ chuỗi nhiều phím liên tiếp (Tùy biến cao cấp):**
+   ```bash
+   ./tinytouch post-key enter,space    # Gõ Enter rồi gõ tiếp phím Space
+   ./tinytouch post-key tab,enter      # Nhấn Tab chuyển nút rồi nhấn Enter
+   ```
+4. **Tinh chỉnh thời gian chờ giữa các phím (từ 0 đến 5000 mili-giây):**
+   ```bash
+   ./tinytouch post-key --delay 200    # Đặt độ trễ giữa các phím là 200ms
+   ```
+
+---
+
 ## 💻 HƯỚNG DẪN DÙNG TINYTOUCH TRÊN NHIỀU MÁY TÍNH KHÁC NHAU
 
 Bạn có thể dùng **1 chiếc tinyTouch** duy nhất để mở khóa và làm việc trên **nhiều máy tính khác nhau**:
@@ -177,8 +204,18 @@ Do chuẩn bảo mật của Apple, mỗi máy Mac mới cần được cấp qu
    *(Hoặc `./tinytouch pair`)*.
 4. Nhập mật khẩu máy Mac mới khi được hỏi để xác nhận cấp quyền.
 5. 👉 **Xong!** Từ lần sau cắm vào máy Mac đó, chỉ cần chạm vân tay là máy nhận diện SmartCard và tự động đăng nhập ngay lập tức.
+6. **Quản lý danh sách máy tính đã ghép nối:**
+   ```bash
+   ./tinytouch computers               # Liệt kê hoặc xóa bớt máy Mac đã ghép nối
+   ```
 
-### ⌨️ 2. Khi ở chế độ HID (Cắm là dùng trên Mac, Windows, Linux):
+### 🔑 2. Tự động xoay chứng chỉ bảo mật (PIV Key Rotation):
+* Bạn có thể làm mới cặp khóa mã hóa RSA-2048 trên thiết bị bất cứ lúc nào mà **không cần cài lại firmware**:
+  ```bash
+  ./tinytouch keys
+  ```
+
+### ⌨️ 3. Khi ở chế độ HID (Cắm là dùng trên Mac, Windows, Linux):
 * **100% Cắm là nhận (Plug & Play)**: Không cần cài đặt phần mềm hay gõ bất kỳ lệnh nào trên máy tính mới.
 * Cắm tinyTouch vào bất kỳ máy Mac, laptop Windows hay PC nào $\rightarrow$ Chạm ngón tay là thiết bị tự động gõ mật khẩu mở máy ngay!
 
@@ -206,19 +243,25 @@ curl -sL https://github.com/mr-old-youtube/MrOld-touch/releases/latest/download/
 
 | Thao tác | Câu lệnh trong Terminal (Lưu ý có dấu `./` ở đầu) |
 | :--- | :--- |
+| **Kiểm tra phiên bản CLI** | `./tinytouch --version` |
 | **Cài đặt trọn gói thiết bị** | `./tinytouch setup` |
 | **Cập nhật lên bản mới nhất** | `tinytouch update` |
-| **Thêm máy Mac mới (Chế độ PIV)** | `./tinytouch add-computer` *(hoặc `./tinytouch pair`)* |
+| **Kiểm tra trạng thái thiết bị** | `./tinytouch status` |
+| **Thử nghiệm kết nối thiết bị** | `./tinytouch test` |
 | **Chuyển sang chế độ tự gõ pass (Khuyên dùng)** | `./tinytouch mode hid` |
 | **Chuyển sang chế độ SmartCard** | `./tinytouch mode piv` |
 | **Xem 5 khe vân tay & Mật khẩu** | `./tinytouch slots` |
 | **Đăng ký thêm ngón tay** | `./tinytouch enroll <1-5>` *(Ví dụ: `./tinytouch enroll 2`)* |
 | **Gán mật khẩu riêng cho ngón** | `./tinytouch set-password <1-5>` |
 | **Xóa mật khẩu riêng của ngón** | `./tinytouch clear-password <1-5>` |
-| **Kiểm tra trạng thái thiết bị** | `./tinytouch status` |
-| **Thử nghiệm kết nối thiết bị** | `./tinytouch test` |
-| **Đổi mật khẩu máy Mac** | `./tinytouch set-password 1` |
-| **Xóa 1 ngón tay** | `./tinytouch delete <1-5>` |
+| **Cấu hình phím bấm kết thúc** | `./tinytouch post-key <enter / tab / enter,space>` |
+| **Đổi thời gian trễ giữa các phím** | `./tinytouch post-key --delay <số mili-giây (0-5000)>` |
+| **Thêm máy Mac mới (Chế độ PIV)** | `./tinytouch add-computer` *(hoặc `./tinytouch pair`)* |
+| **Quản lý máy tính đã kết nối** | `./tinytouch computers` |
+| **Làm mới khóa mã hóa PIV** | `./tinytouch keys` |
+| **Xem nhật ký hoạt động (Logs)** | `./tinytouch logs` |
+| **Xóa 1 ngón tay cụ thể** | `./tinytouch delete <1-5>` |
+| **Xóa toàn bộ vân tay** | `./tinytouch delete --all` |
 | **Khôi phục cài đặt gốc** | `./tinytouch factory-reset` |
 
 ---
