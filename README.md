@@ -5,14 +5,18 @@ Link mua  https://s.shopee.vn/6Akenn3gQu
 ---
 
 ## 🎯 TÍNH NĂNG NỔI BẬT
-* ⚡ **Mở khóa Mac 1 chạm:** Chạm nhẹ ngón tay để mở khóa màn hình ngay tức thì.
-* ⌨️ **Tùy biến phím kết thúc & độ trễ:** Linh hoạt cấu hình phím tự động nhấn sau khi gõ mật khẩu (Enter, Tab, phím kép `enter,space`, `tab,enter`) và tinh chỉnh độ trễ từ 0 đến 5000ms.
-* 🔑 **Tự động điền mật khẩu:** Hỗ trợ đăng nhập Apple Passwords, Keychain, Safari, 1Password, Bitwarden, trình duyệt Web...
-* 🖐️ **Đa tài khoản (5 Ngón tay - 5 Mật khẩu):** Mỗi ngón tay có thể mở một mật khẩu/tài khoản khác nhau.
-* 🛡️ **Phê duyệt quyền Admin:** Xác thực nhanh khi cài ứng dụng, phân quyền hệ thống hoặc lệnh `sudo` trong Terminal.
-* 🔒 **100% Phần cứng độc lập:** Không cần cài đặt Python, không chạy bất kỳ dịch vụ ngầm nào trên máy Mac, cắm là chạy (Plug & Play).
-* 🛡️ **Bảo mật phần cứng cấp quân sự:** Mã hóa phần cứng XTS-AES 256-bit chống trích xuất dữ liệu và khóa 2 lớp chống tráo cảm biến.
-* 🌙 **Thiết kế Stealth Mode:** Đèn LED thông minh tự động tắt hoàn toàn khi ở chế độ chờ.
+* 🛡️ **Khóa bảo mật sinh trắc học FIDO2 Passkeys (Chuẩn quốc tế):** Tích hợp phần cứng FIDO2 / CTAP2.1 & WebAuthn cao cấp (tương đương YubiKey Bio). Đăng nhập không cần mật khẩu (Passwordless) siêu tốc và an toàn tuyệt đối cho Google, Microsoft, Apple ID, GitHub, Binance, X (Twitter), Bitwarden... Chống tấn công lừa đảo (Phishing-resistant) 100% nhờ xác thực trực tiếp qua cảm biến vân tay phần cứng.
+* ⚡ **Mở khóa máy tính 1 chạm siêu tốc:** Chạm nhẹ ngón tay để tự động mở khóa màn hình ngay tức thì trên cả **macOS, Windows và Linux**.
+* 🌙 **Tự động đánh thức USB Remote Wakeup:** Chạm ngón tay khi máy tính đang ngủ sâu (Deep Sleep) — thiết bị tự động gửi tín hiệu đánh thức màn hình và gõ chuẩn xác toàn bộ mật khẩu, không bị mất ký tự.
+* 🌐 **Chế độ kép thông minh (Dual-Mode HID + FIDO2):** Hoạt động song song vừa là bàn phím tự gõ mật khẩu thông minh, vừa là USB Security Key FIDO2 mà không cần chuyển đổi phức tạp.
+* 🔑 **Tự động điền mật khẩu mọi nơi:** Hỗ trợ đăng nhập linh hoạt vào Apple Passwords, Keychain, Safari, Chrome, 1Password, Bitwarden, ô đăng nhập Admin hệ thống hoặc lệnh `sudo` trong Terminal.
+* 🖐️ **Đa tài khoản (5 Ngón tay — 5 Mật khẩu độc lập):** Biến 5 ngón tay thành 5 "chìa khóa" mở 5 tài khoản hoặc dịch vụ khác nhau (Ngón trỏ mở máy, ngón giữa mở Master Password, ngón áp út mở Email/VPN...).
+* ⌨️ **Tùy biến phím kết thúc & độ trễ linh hoạt:** Tự do cấu hình phím tự bấm sau khi gõ pass (`Enter`, `Tab`, `None`, hoặc tổ hợp phím kép `enter,space`, `tab,enter`) kèm thời gian chờ tinh chỉnh từ 0 đến 5000ms.
+* 💻 **Quản lý trực quan 100% qua Web (Web Controller):** Quản lý vân tay, đổi mật khẩu các slot, xem và xóa danh sách Passkeys FIDO2 đã lưu, nâng cấp firmware 1 chạm trực tiếp trên trình duyệt Chrome/Edge qua WebUSB mà **không cần cài đặt bất kỳ phần mềm nào**.
+* 🔒 **Bảo mật phần cứng độc lập cấp quân sự:** Toàn bộ dữ liệu mật khẩu và chứng chỉ FIDO2 được mã hóa phần cứng **XTS-AES 256-bit** trong Flash của chip ESP32-S3, chống trích xuất dữ liệu và khóa 2 lớp chống tráo cảm biến. 
+* 🔌 **100% Cắm là chạy (Plug & Play):** Không chạy bất kỳ tiến trình hay dịch vụ chạy ngầm nào trên máy tính, không ngốn RAM/CPU, không lo xung đột phần mềm.
+* 🌑 **Thiết kế Stealth Mode:** Đèn LED thông minh chỉ sáng khi quét vân tay và tự động tắt hoàn toàn khi ở chế độ chờ (không chói mắt, tiết kiệm điện năng tối đa).
+
 
 ---
 
