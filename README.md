@@ -1,7 +1,9 @@
 # 🌟 HƯỚNG DẪN CÀI ĐẶT & SỬ DỤNG THIẾT BỊ TINYTOUCH
 
 Chào mừng bạn đến với **tinyTouch** — Thiết bị xác thực cảm biến vân tay cao cấp mở khóa 1 chạm siêu tốc dành cho hệ điều hành **macOS** (MacBook, Mac mini, Mac Studio, iMac).
+
 Link mua  https://s.shopee.vn/6Akenn3gQu
+
 Hỗ trợ kỹ thuật https://m.me/100194225154263
 ---
 
