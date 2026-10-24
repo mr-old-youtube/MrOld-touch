@@ -29,7 +29,7 @@ Hỗ trợ kỹ thuật https://m.me/100194225154263
 *(Ứng dụng đồ họa chạy nền trên thanh Menu Bar, hỗ trợ mở khóa màn hình kể cả khi Sleep, xác thực sudo và bảo vệ chống lộ mật khẩu)*
 
 ### 📌 Bước 1: Cài đặt ứng dụng từ file `.dmg`
-1. Tải về file [**tinyTouch-macOS.dmg**](file:///Volumes/VietBoss/code/tinyTouch/release/tinyTouch-macOS.dmg) (hoặc nằm trong thư mục `release/`).
+1. Tải về file [**tinyTouch-macOS.dmg (Bản mới nhất)**](https://github.com/mr-old-youtube/MrOld-touch/releases/latest/download/tinyTouch-macOS.dmg).
 2. Nhấp đúp mở file `.dmg` $\rightarrow$ Kéo biểu tượng **`tinyTouch.app`** thả vào thư mục **`Applications`**.
 
 ### 📌 Bước 2: Mở ứng dụng và Cấp quyền Trợ năng (Accessibility)
