@@ -28,24 +28,38 @@ Hỗ trợ kỹ thuật https://m.me/100194225154263
 ## 🍎 CÁCH 1: SỬ DỤNG ỨNG DỤNG MENU BAR TRÊN MACOS (KHUYÊN DÙNG CHO MAC)
 *(Ứng dụng đồ họa chạy nền trên thanh Menu Bar, hỗ trợ mở khóa màn hình kể cả khi Sleep, xác thực sudo và bảo vệ chống lộ mật khẩu)*
 
-### 📌 Bước 1: Cài đặt ứng dụng từ file `.dmg`
+> ⚠️ **LƯU Ý QUAN TRỌNG:**  
+> Thiết bị tinyTouch xuất xưởng chưa có dữ liệu vân tay. Bạn **BẮT BUỘC phải đăng ký vân tay trên Web trước (Bước 1)** thì thiết bị mới có vân tay chính chủ để chạm xác thực khi ghép đôi với ứng dụng macOS!
+
+### 📌 Bước 1: Đăng ký vân tay trên Web Controller (Bắt buộc làm trước)
+1. Cắm thiết bị **tinyTouch** vào cổng USB máy Mac.
+2. Mở trình duyệt web (**Google Chrome**, **Microsoft Edge**, **Cốc Cốc** hoặc **Opera**) và truy cập:  
+   👉 **[https://touch.mrold.xyz/](https://touch.mrold.xyz/)**
+3. Bấm nút **"Kết nối thiết bị"** ở góc trên cùng bên phải $\rightarrow$ Chọn dòng **`tinyTouch`** $\rightarrow$ Bấm **Connect**.
+4. **Đăng ký vân tay (Slot 1):**
+   * Bấm nút **"👆 Quét ngón"** tại Slot 1 (hoặc ngón bạn muốn dùng).
+   * Đặt ngón tay lên cảm biến $\rightarrow$ Nhấc ngón tay ra $\rightarrow$ Đặt lại theo hướng dẫn trên màn hình cho đến khi báo `✓ Đã quét vân tay`.
+   *(💡 **Lưu ý:** Bạn chỉ cần quét vân tay trên Web, **KHÔNG CẦN đặt mật khẩu trên Web**, vì mật khẩu mở máy Mac sẽ được ứng dụng tinyTouch lưu an toàn vào macOS Keychain ở các bước sau).*
+5. Sau khi quét vân tay thành công, **đóng tab web** để giải phóng cổng kết nối cho ứng dụng macOS.
+
+### 📌 Bước 2: Cài đặt ứng dụng từ file `.dmg`
 1. Tải về file [**tinyTouch-macOS.dmg (Bản mới nhất)**](https://github.com/mr-old-youtube/MrOld-touch/releases/latest/download/tinyTouch-macOS.dmg).
 2. Nhấp đúp mở file `.dmg` $\rightarrow$ Kéo biểu tượng **`tinyTouch.app`** thả vào thư mục **`Applications`**.
 
-### 📌 Bước 2: Mở ứng dụng và Cấp quyền Trợ năng (Accessibility)
-1. Vào thư mục **Applications**, nhấp phải vào `tinyTouch` $\rightarrow$ chọn **Open** (để macOS cho phép ứng dụng mở lần đầu).
+### 📌 Bước 3: Mở ứng dụng và Cấp quyền Trợ năng (Accessibility)
+1. Vào thư mục **Applications**, nhấp phải vào `tinyTouch` $\rightarrow$ chọn **Open** $\rightarrow$ chọn **Open** (để macOS cho phép ứng dụng mở lần đầu).
 2. Khi mở lên, icon **vòng tròn sinh trắc vân tay** sẽ xuất hiện trên thanh **Menu Bar** (góc trên bên phải màn hình).
 3. **Cấp quyền Trợ năng (Bắt buộc để gõ pass vào màn hình khóa):**
    * Vào **Cài đặt hệ thống (System Settings)** $\rightarrow$ **Quyền riêng tư & Bảo mật (Privacy & Security)** $\rightarrow$ **Trợ năng (Accessibility)**.
    * Tìm ứng dụng **tinyTouch** và gạt công tắc sang **BẬT (ON)**.
 
-### 📌 Bước 3: Thiết lập mật khẩu & Ghép đôi an toàn
+### 📌 Bước 4: Thiết lập mật khẩu & Ghép đôi an toàn
 1. Cắm thiết bị **tinyTouch** vào cổng USB máy Mac.
-2. Bấm vào icon tinyTouch trên Menu Bar $\rightarrow$ chọn **"Cài đặt & Mật khẩu..."**.
+2. Bấm vào icon tinyTouch trên Menu Bar $\rightarrow$ chọn **"Cài đặt & Mật khẩu..."** (hoặc nhấn phím tắt `⌘,`).
 3. **Tại cửa sổ Cài đặt:**
-   * **Mục 1 (Ghép đôi bảo mật):** Bấm nút **"⚡ Tạo Mã & Ghép Đôi Tự Động"** $\rightarrow$ Hệ thống tự sinh mã khóa 64 ký tự hex ngẫu nhiên an toàn.
-   * **Chạm vân tay:** Đặt ngón tay đã đăng ký vào cảm biến tinyTouch để xác nhận quyền chủ nhân và lưu mã khóa vào chip.
-   * **Mục 2 (Mật khẩu mở máy):** Nhập mật khẩu tài khoản macOS của máy Mac hiện tại $\rightarrow$ Bấm **"Lưu Mật Khẩu Vào Keychain"**.
+   * **Mục 2 (Mật khẩu mở máy Mac):** Nhập mật khẩu tài khoản macOS của máy Mac hiện tại $\rightarrow$ Bấm **"Lưu Pass"**.
+   * **Mục 3 (Ghép đôi bảo mật):** Bấm nút **"⚡ Tạo Mã & Ghép Đôi Tự Động"** $\rightarrow$ Hệ thống tự sinh mã khóa 64 ký tự hex ngẫu nhiên an toàn và hiển thị *"⏳ Đang yêu cầu xác thực vân tay trên tinyTouch..."*.
+   * **Chạm vân tay:** Đặt **ngón tay đã đăng ký trên Web ở Bước 1** vào cảm biến tinyTouch để xác nhận quyền chủ nhân và lưu mã khóa vào chip.
 4. 🎉 **Hoàn tất!** Giờ đây mỗi khi bạn khóa máy (`Cmd + Ctrl + Q`) hoặc máy đang ngủ (Sleep), chỉ cần chạm vân tay là máy tự sáng màn hình và mở khóa ngay lập tức!
 
 ### 📌 Các tính năng mở rộng trên Menu Bar:
@@ -347,4 +361,5 @@ curl -sL https://github.com/mr-old-youtube/MrOld-touch/releases/latest/download/
 
 #### 4. Thiết bị có lưu mật khẩu của tôi an toàn không?
 > 🛡️ **Tuyệt đối an toàn!** Mật khẩu được mã hóa phần cứng chuẩn **XTS-AES 256-bit** trực tiếp trong bộ nhớ Flash của chip. Kể cả khi có người tháo rời cảm biến hoặc can thiệp vật lý cũng không thể đọc trộm được mật khẩu.
+
 
