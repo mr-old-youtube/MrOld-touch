@@ -8,74 +8,100 @@ Hỗ trợ kỹ thuật https://m.me/100194225154263
 
 ---
 
-## 🎯 TÍNH NĂNG NỔI BẬT (FIRMWARE v1.1.1)
+## 🎯 TÍNH NĂNG NỔI BẬT (FIRMWARE v1.1.7)
 * 🛡️ **Khóa bảo mật sinh trắc học FIDO2 Passkeys (Chuẩn quốc tế):** Tích hợp phần cứng FIDO2 / CTAP2.1 & WebAuthn cao cấp (tương đương YubiKey Bio). Đăng nhập không cần mật khẩu (Passwordless) siêu tốc và an toàn tuyệt đối cho Google, Microsoft, Apple ID, GitHub, Binance, X (Twitter), Bitwarden... Chống tấn công lừa đảo (Phishing-resistant) 100% nhờ xác thực trực tiếp qua cảm biến vân tay phần cứng.
 * ⚡ **Mở khóa máy tính 1 chạm siêu tốc:** Chạm nhẹ ngón tay để tự động mở khóa màn hình ngay tức thì trên cả **macOS, Windows và Linux**.
-* 🌙 **Tự động đánh thức USB Remote Wakeup:** Chạm ngón tay khi máy tính đang ngủ sâu (Deep Sleep) — thiết bị tự động gửi tín hiệu đánh thức màn hình và gõ chuẩn xác toàn bộ mật khẩu, không bị mất ký tự.
+* 🖐️ **Quản lý vân tay trực tiếp 100% trong App (Mới trên v1.1.7):** Xem trạng thái 5 khe vân tay (Slot), đăng ký ngón mới, đăng ký lại hoặc xóa vân tay trực quan ngay trong ứng dụng macOS và Windows mà **không cần truy cập Web Controller**.
+* 🌙 **Tự động đánh thức USB Remote Wakeup & DCD Hardware Resume:** Chạm ngón tay khi máy tính đang ngủ sâu (Deep Sleep) hoặc màn hình tắt — chip tự phát xung phần cứng đánh thức màn hình và gõ chuẩn xác toàn bộ mật khẩu trong nháy mắt.
 * 🛡️ **Chống dính phím cứng (Shift/Cmd/Alt):** Tự động phát hiện khi tay bạn vô tình tì vào phím Shift, Command hoặc Option trên bàn phím Mac và đợi bạn nhả ra mới gõ pass, chống gõ sai mật khẩu 100%.
-* 👁️ **Tự kiểm tra kết quả mở khóa:** App tự động đối soát cửa sổ màn hình khóa sau 2.0 giây để ghi nhận và cảnh báo nếu có sự cố lỡ nhịp.
+* 👁️ **Tự kiểm tra kết quả mở khóa & Stealth LED:** App tự động đối soát cửa sổ màn hình khóa để nhận diện. Đèn LED chỉ sáng phản hồi khi chạm vân tay và tự động tắt hoàn toàn khi ở chế độ chờ.
 * 🌐 **Chế độ kép thông minh (Dual-Mode HID + FIDO2):** Hoạt động song song vừa là bàn phím tự gõ mật khẩu thông minh, vừa là USB Security Key FIDO2 mà không cần chuyển đổi phức tạp.
 * 🔑 **Tự động điền mật khẩu mọi nơi:** Hỗ trợ đăng nhập linh hoạt vào Apple Passwords, Keychain, Safari, Chrome, 1Password, Bitwarden, ô đăng nhập Admin hệ thống hoặc lệnh `sudo` trong Terminal.
 * 🖐️ **Đa tài khoản (5 Ngón tay — 5 Mật khẩu độc lập):** Biến 5 ngón tay thành 5 "chìa khóa" mở 5 tài khoản hoặc dịch vụ khác nhau (Ngón trỏ mở máy, ngón giữa mở Master Password, ngón áp út mở Email/VPN...).
 * ⌨️ **Tùy biến phím kết thúc & độ trễ linh hoạt:** Tự do cấu hình phím tự bấm sau khi gõ pass (`Enter`, `Tab`, `None`, hoặc tổ hợp phím kép `enter,space`, `tab,enter`) kèm thời gian chờ tinh chỉnh từ 0 đến 5000ms.
-* 💻 **Quản lý trực quan 100% qua Web (Web Controller):** Quản lý vân tay, đổi mật khẩu các slot, xem và xóa danh sách Passkeys FIDO2 đã lưu, nâng cấp firmware 1 chạm trực tiếp trên trình duyệt Chrome/Edge qua WebUSB mà **không cần cài đặt bất kỳ phần mềm nào**.
+* 💻 **Quản lý linh hoạt đa nền tảng:** Có thể quản lý trực tiếp qua **App macOS / Windows**, qua **Web Controller** (trên Chrome/Edge không cần cài app) hoặc qua **CLI chuyên nghiệp**.
 * 🔒 **Bảo mật phần cứng độc lập cấp quân sự:** Toàn bộ dữ liệu mật khẩu và chứng chỉ FIDO2 được mã hóa phần cứng **XTS-AES 256-bit** trong Flash của chip ESP32-S3, chống trích xuất dữ liệu và khóa 2 lớp chống tráo cảm biến. 
-* 🔌 **100% Cắm là chạy (Plug & Play):** Không chạy bất kỳ tiến trình hay dịch vụ chạy ngầm nào trên máy tính, không ngốn RAM/CPU, không lo xung đột phần mềm.
-* 🌑 **Thiết kế Stealth Mode:** Đèn LED thông minh chỉ sáng khi quét vân tay và tự động tắt hoàn toàn khi ở chế độ chờ (không chói mắt, tiết kiệm điện năng tối đa).
+* 🔌 **100% Cắm là chạy (Plug & Play):** Thiết bị có chế độ lưu pass on-chip độc lập, cắm sang máy lạ tự gõ mật khẩu mà không cần cài đặt phần mềm.
 
 ---
 
 ## 🍎 CÁCH 1: SỬ DỤNG ỨNG DỤNG MENU BAR TRÊN MACOS (KHUYÊN DÙNG CHO MAC)
-*(Ứng dụng đồ họa chạy nền trên thanh Menu Bar, hỗ trợ mở khóa màn hình kể cả khi Sleep, xác thực sudo và bảo vệ chống lộ mật khẩu)*
+*(Ứng dụng đồ họa chạy nền trên thanh Menu Bar, hỗ trợ mở khóa màn hình kể cả khi Sleep, xác thực sudo, quản lý 5 slot vân tay và bảo vệ chống lộ mật khẩu)*
 
-> ⚠️ **LƯU Ý QUAN TRỌNG:**  
-> Thiết bị tinyTouch xuất xưởng chưa có dữ liệu vân tay. Bạn **BẮT BUỘC phải đăng ký vân tay trên Web trước (Bước 1)** thì thiết bị mới có vân tay chính chủ để chạm xác thực khi ghép đôi với ứng dụng macOS!
+> 💡 **ĐIỂM MỚI TỪ PHIÊN BẢN v1.1.7:**  
+> Bạn có thể **đăng ký và quản lý vân tay trực tiếp 100% ngay trong ứng dụng macOS**. Không còn bắt buộc phải truy cập Web Controller trước như các phiên bản cũ!
 
-### 📌 Bước 1: Đăng ký vân tay trên Web Controller (Bắt buộc làm trước)
-1. Cắm thiết bị **tinyTouch** vào cổng USB máy Mac.
-2. Mở trình duyệt web (**Google Chrome**, **Microsoft Edge**, **Cốc Cốc** hoặc **Opera**) và truy cập:  
-   👉 **[https://touch.mrold.xyz/](https://touch.mrold.xyz/)**
-3. Bấm nút **"Kết nối thiết bị"** ở góc trên cùng bên phải $\rightarrow$ Chọn dòng **`tinyTouch`** $\rightarrow$ Bấm **Connect**.
-4. **Đăng ký vân tay (Slot 1):**
-   * Bấm nút **"👆 Quét ngón"** tại Slot 1 (hoặc ngón bạn muốn dùng).
-   * Đặt ngón tay lên cảm biến $\rightarrow$ Nhấc ngón tay ra $\rightarrow$ Đặt lại theo hướng dẫn trên màn hình cho đến khi báo `✓ Đã quét vân tay`.
-   *(💡 **Lưu ý:** Bạn chỉ cần quét vân tay trên Web, **KHÔNG CẦN đặt mật khẩu trên Web**, vì mật khẩu mở máy Mac sẽ được ứng dụng tinyTouch lưu an toàn vào macOS Keychain ở các bước sau).*
-5. Sau khi quét vân tay thành công, **đóng tab web** để giải phóng cổng kết nối cho ứng dụng macOS.
-
-### 📌 Bước 2: Cài đặt ứng dụng từ file `.dmg`
+### 📌 Bước 1: Cài đặt ứng dụng từ file `.dmg`
 1. Tải về file [**tinyTouch-macOS.dmg (Bản mới nhất)**](https://github.com/mr-old-youtube/MrOld-touch/releases/latest/download/tinyTouch-macOS.dmg).
 2. Nhấp đúp mở file `.dmg` $\rightarrow$ Kéo biểu tượng **`tinyTouch.app`** thả vào thư mục **`Applications`**.
 
-### 📌 Bước 3: Mở ứng dụng và Cấp quyền Trợ năng (Accessibility)
+### 📌 Bước 2: Mở ứng dụng và Cấp quyền Trợ năng (Accessibility)
 1. Vào thư mục **Applications**, nhấp phải vào `tinyTouch` $\rightarrow$ chọn **Open** $\rightarrow$ chọn **Open** (để macOS cho phép ứng dụng mở lần đầu).
 2. Khi mở lên, icon **vòng tròn sinh trắc vân tay** sẽ xuất hiện trên thanh **Menu Bar** (góc trên bên phải màn hình).
 3. **Cấp quyền Trợ năng (Bắt buộc để gõ pass vào màn hình khóa):**
    * Vào **Cài đặt hệ thống (System Settings)** $\rightarrow$ **Quyền riêng tư & Bảo mật (Privacy & Security)** $\rightarrow$ **Trợ năng (Accessibility)**.
    * Tìm ứng dụng **tinyTouch** và gạt công tắc sang **BẬT (ON)**.
 
-### 📌 Bước 4: Thiết lập mật khẩu & Ghép đôi an toàn
+### 📌 Bước 3: Đăng ký vân tay trực tiếp trong App
 1. Cắm thiết bị **tinyTouch** vào cổng USB máy Mac.
-2. Bấm vào icon tinyTouch trên Menu Bar $\rightarrow$ chọn **"Cài đặt & Mật khẩu..."** (hoặc nhấn phím tắt `⌘,`).
-3. **Tại cửa sổ Cài đặt:**
-   * **Mục 2 (Mật khẩu mở máy Mac):** Nhập mật khẩu tài khoản macOS của máy Mac hiện tại $\rightarrow$ Bấm **"Lưu Pass"**.
+2. Bấm vào icon tinyTouch trên Menu Bar $\rightarrow$ chọn **"Quản Lý Vân Tay..."** (hoặc nhấn phím tắt `⌘F`).
+3. Cửa sổ Quản Lý Vân Tay sẽ hiển thị trạng thái của cả 5 Slot:
+   * Tại **Slot 1 (Ngón trỏ - Mặc định)** hoặc bất kỳ slot nào bạn muốn dùng, bấm nút **"Đăng ký"**.
+   * Thiết bị sẽ hướng dẫn bạn bằng thanh tiến trình trực quan:
+     * *Chạm nhẹ ngón tay vào cảm biến...*
+     * *Nhấc ngón tay ra khỏi cảm biến...*
+     * *Chạm lại để lấy đủ góc cạnh vân tay...*
+   * Khi hoàn tất, giao diện sẽ cập nhật trạng thái: **`✅ Đã đăng ký`**.
+4. *(Tùy chọn: Bạn có thể đăng ký thêm ngón thứ 2, ngón thứ 3 ngay tại cửa sổ này nếu muốn)*.
+
+### 📌 Bước 4: Thiết lập mật khẩu & Ghép đôi an toàn
+1. Bấm vào icon tinyTouch trên Menu Bar $\rightarrow$ chọn **"Cài đặt & Mật khẩu..."** (hoặc nhấn phím tắt `⌘,`).
+2. **Tại cửa sổ Cài đặt:**
+   * **Mục 2 (Mật khẩu mở máy Mac):** Nhập mật khẩu tài khoản macOS của máy Mac hiện tại $\rightarrow$ Bấm **"Lưu Pass"**. *(Mật khẩu được lưu an toàn trong macOS Keychain của riêng bạn)*.
    * **Mục 3 (Ghép đôi bảo mật):** Bấm nút **"⚡ Tạo Mã & Ghép Đôi Tự Động"** $\rightarrow$ Hệ thống tự sinh mã khóa 64 ký tự hex ngẫu nhiên an toàn và hiển thị *"⏳ Đang yêu cầu xác thực vân tay trên tinyTouch..."*.
-   * **Chạm vân tay:** Đặt **ngón tay đã đăng ký trên Web ở Bước 1** vào cảm biến tinyTouch để xác nhận quyền chủ nhân và lưu mã khóa vào chip.
-4. 🎉 **Hoàn tất!** Giờ đây mỗi khi bạn khóa máy (`Cmd + Ctrl + Q`) hoặc máy đang ngủ (Sleep), chỉ cần chạm vân tay là máy tự sáng màn hình và mở khóa ngay lập tức!
+   * **Chạm vân tay:** Đặt **ngón tay đã đăng ký ở Bước 3** vào cảm biến tinyTouch để xác nhận quyền chủ nhân và hoàn tất ghép đôi.
+3. 🎉 **Hoàn tất!** Giờ đây mỗi khi bạn khóa máy (`Cmd + Ctrl + Q`) hoặc máy đang ngủ (Sleep), chỉ cần chạm nhẹ vân tay là máy tự sáng màn hình và mở khóa ngay lập tức!
 
 ### 📌 Các tính năng mở rộng trên Menu Bar:
+* **Quản Lý Vân Tay (`⌘F`):** Trực tiếp kiểm tra tình trạng 5 ngón tay, đăng ký ngón mới, đăng ký lại hoặc xóa vân tay bất kỳ lúc nào.
 * **Xác thực lệnh `sudo` bằng vân tay:** Khi bạn gõ `sudo ...` trong Terminal, app sẽ lắng nghe và bạn chỉ cần chạm vân tay vào tinyTouch là lệnh chạy ngay mà không cần gõ mật khẩu.
 * **Bộ lọc ngữ cảnh an toàn (Context Filter):** Tự động phát hiện màn hình khóa hoặc ô mật khẩu an toàn. Nếu bạn chạm vân tay ngoài màn hình Desktop bình thường, app sẽ chặn không gõ ra để chống lộ mật khẩu.
-* **Quản lý ghép đôi:** Cho phép xem danh sách máy Mac đã ghép đôi và xóa quyền các máy cũ trực tiếp từ giao diện.
+* **Quản lý ghép đôi (`⌘P`):** Cho phép xem danh sách máy Mac đã ghép đôi và xóa quyền các máy cũ trực tiếp từ giao diện.
 
 ---
 
-## 🌐 CÁCH 2: KHỞI TẠO QUA TRÌNH DUYỆT WEB (CHO WINDOWS, LINUX & CHẾ ĐỘ THUẦN HID)
-*(⚡ 100% Không cần cài phần mềm — Khuyên dùng cho Windows & người dùng chỉ thích tự gõ mật khẩu)*
+## 🪟 CÁCH 2: SỬ DỤNG ỨNG DỤNG CHO WINDOWS (KHUYÊN DÙNG CHO WINDOWS 10/11)
+*(Tích hợp trực tiếp vào màn hình khóa Windows Logon/Lock Screen qua Credential Provider, tự động điền mật khẩu và quản lý vân tay)*
 
-Nếu bạn sử dụng **Windows**, **Linux** hoặc trên Mac chỉ muốn dùng chế độ **Tự gõ mật khẩu (HID)**:
+### 📌 Bước 1: Tải và cài đặt
+1. Tải về file cài đặt [**tinyTouch-Setup-x64.exe (Bản mới nhất)**](https://github.com/mr-old-youtube/MrOld-touch/releases/latest/download/tinyTouch-Setup-x64.exe).
+2. Nhấp đúp vào file `.exe` $\rightarrow$ Chọn cài đặt. Trình cài đặt sẽ tự động:
+   * Cài đặt phần mềm vào `C:\Program Files\tinyTouch`.
+   * Tự động đăng ký dịch vụ nền **tinyTouch Fingerprint Security Service**.
+   * Tích hợp bộ giải mã đăng nhập sinh trắc học **TinyTouchCredentialProvider** vào màn hình khóa Windows.
+   * Tạo biểu tượng khay hệ thống (System Tray) tự khởi động cùng Windows.
+
+### 📌 Bước 2: Đăng ký vân tay & Cài mật khẩu mở máy
+1. Cắm thiết bị **tinyTouch** vào cổng USB.
+2. Mở ứng dụng **tinyTouch** từ biểu tượng vân tay dưới khay hệ thống (góc dưới bên phải màn hình).
+3. **Đăng ký vân tay:**
+   * Trong giao diện chính, vào mục **"Quản lý vân tay"**.
+   * Bấm **"Đăng ký"** tại Slot 1 $\rightarrow$ Đặt và nhấc ngón tay theo thanh tiến trình trên màn hình cho đến khi báo hoàn tất.
+4. **Cài mật khẩu mở máy Windows:**
+   * Nhập mật khẩu hoặc mã PIN tài khoản Windows của bạn vào ô mật khẩu $\rightarrow$ Bấm **"Lưu mật khẩu"**.
+   * Chạm ngón tay vào tinyTouch để xác nhận quyền chủ nhân.
+
+🎉 **Hoàn tất!** Giờ đây mỗi khi bạn khóa máy (`Windows + L`), biểu tượng **tinyTouch Fingerprint** sẽ xuất hiện trên màn hình khóa. Bạn chỉ cần chạm nhẹ ngón tay vào cảm biến là Windows tự mở khóa tức thì!
+
+---
+
+## 🌐 CÁCH 3: CẤU HÌNH NHANH QUA TRÌNH DUYỆT WEB (CHO LINUX & CHẾ ĐỘ THUẦN HID)
+*(⚡ 100% Không cần cài phần mềm — Dành cho Linux hoặc người dùng muốn thiết bị tự gõ pass on-chip độc lập)*
+
+Nếu bạn sử dụng **Linux** hoặc trên bất kỳ hệ điều hành nào chỉ muốn dùng chế độ **Tự gõ mật khẩu độc lập trên phần cứng (Standalone HID)**:
 
 ### 📌 Bước 1: Cắm tinyTouch vào cổng USB máy tính
-* Windows 10/11, macOS và Linux sẽ tự động nhận diện thiết bị ngay lập tức (không cần cài thêm driver).
+* Mọi hệ điều hành sẽ tự động nhận diện thiết bị ngay lập tức (không cần cài thêm driver).
 
 ### 📌 Bước 2: Mở Web Controller
 * Mở trình duyệt (Google Chrome, Microsoft Edge, Opera, Cốc Cốc) và truy cập:
@@ -89,19 +115,19 @@ Nếu bạn sử dụng **Windows**, **Linux** hoặc trên Mac chỉ muốn dù
 ### 📌 Bước 4: Đăng ký vân tay & Cài mật khẩu mở máy
 1. **Quét vân tay chính (Slot 1):**
    * Bấm nút **"👆 Quét ngón"** tại Slot 1.
-   * Đặt ngón tay lên cảm biến lần 1 $\rightarrow$ Nhấc ngón tay ra $\rightarrow$ Đặt lại lần 2 $\rightarrow$ Báo `✓ Đã quét vân tay`.
+   * Đặt ngón tay lên cảm biến $\rightarrow$ Nhấc ra $\rightarrow$ Đặt lại theo hướng dẫn cho đến khi báo `✓ Đã quét vân tay`.
 2. **Cài mật khẩu mở máy:**
    * Bấm nút **"🔑 Đặt pass"** tại Slot 1.
-   * Nhập mã PIN hoặc mật khẩu mở máy tính của bạn $\rightarrow$ Bấm **"Lưu mật khẩu"**.
-   * Chạm nhẹ vân tay vào cảm biến để xác nhận lưu an toàn trực tiếp vào chip.
+   * Nhập mã PIN hoặc mật khẩu của bạn $\rightarrow$ Bấm **"Lưu mật khẩu"**.
+   * Chạm nhẹ vân tay vào cảm biến để xác nhận lưu an toàn trực tiếp vào bộ nhớ mã hóa của chip.
 3. **Kiểm tra chế độ:**
    * Mặc định thiết bị xuất xưởng đã ở sẵn **🟢 HID Keyboard**. Nếu đang ở PIV, bạn chỉ cần bấm nút **"Chuyển sang HID"**.
 
-🎉 **HOÀN TẤT!** Bây giờ mỗi khi khóa màn hình (`Win + L` trên Windows hoặc `Cmd + Ctrl + Q` trên Mac), bạn chỉ cần **chạm nhẹ vân tay vào cảm biến** là thiết bị tự động gõ mật khẩu và nhấn Enter mở máy tức thì!
+🎉 **HOÀN TẤT!** Bây giờ thiết bị đã lưu trữ mật khẩu trực tiếp trên chip. Mỗi khi cắm vào bất kỳ máy tính nào, bạn chỉ cần **chạm nhẹ vân tay** là thiết bị tự động gõ mật khẩu và nhấn Enter mở máy tức thì mà không cần cài thêm bất kỳ phần mềm nào!
 
 ---
 
-## 💻 CÁCH 3: CÀI ĐẶT BẰNG CÔNG CỤ DÒNG LỆNH CLI CHO MACOS
+## 💻 CÁCH 4: CÀI ĐẶT BẰNG CÔNG CỤ DÒNG LỆNH CLI CHO MACOS & LINUX
 *(Dành cho lập trình viên hoặc người dùng thích thao tác chuyên nghiệp qua Terminal)*
 
 ### 📌 Bước 1: Tải về và giải nén
@@ -185,31 +211,26 @@ Từ phiên bản Firmware **v1.0.6**, tinyTouch đóng vai trò như một **Kh
 
 Ở chế độ **HID Mode**, tinyTouch cho phép bạn biến 5 ngón tay thành 5 "chìa khóa" mở 5 tài khoản khác nhau:
 
-### 🌟 Ví dụ cách dùng:
-* 👆 **Ngón trỏ (Slot 1):** Mật khẩu máy Mac (đăng nhập máy).
+### 🌟 Ví dụ cách dùng thực tế:
+* 👆 **Ngón trỏ (Slot 1):** Mật khẩu mở máy Mac / Windows.
 * 🖕 **Ngón giữa (Slot 2):** Master Password của 1Password / Bitwarden / Apple Passwords.
 * 💍 **Ngón áp út (Slot 3):** Mật khẩu tài khoản Email / Công ty / VPN.
 * 🤙 **Ngón cái (Slot 4):** Mật khẩu Server / SSH / GitHub token.
-* 🖐️ **Ngón út (Slot 5):** Mật khẩu ví tiền điện tử (Crypto) hoặc ghi chú bảo mật.
+* 🖐️ **Ngón út (Slot 5):** Mật khẩu ví tiền điện tử (Crypto) hoặc ghi chú bí mật.
 
-### ⚙️ Các lệnh thiết lập:
-1. **Xem danh sách 5 khe vân tay:**
-   ```bash
-   ./tinytouch slots
-   ```
-2. **Đăng ký vân tay cho ngón mới (ví dụ ngón 2):**
-   ```bash
-   ./tinytouch enroll 2
-   ```
-3. **Cài mật khẩu riêng cho từng ngón:**
-   ```bash
-   ./tinytouch set-password 2    # Cài mật khẩu riêng cho ngón 2
-   ./tinytouch set-password 3    # Cài mật khẩu riêng cho ngón 3
-   ```
-4. **Xóa mật khẩu riêng của 1 ngón (quay về mật khẩu mặc định):**
-   ```bash
-   ./tinytouch clear-password 2
-   ```
+### ⚙️ Cách thiết lập thuận tiện:
+* **Cách 1: Trực tiếp trong App macOS / Windows (Khuyên dùng):**
+  * Trên Mac: Bấm Menu Bar $\rightarrow$ **"Quản Lý Vân Tay..."** (`⌘F`) $\rightarrow$ Bấm **"Đăng ký"** tại Slot tương ứng.
+  * Trên Windows: Mở ứng dụng $\rightarrow$ Vào mục **"Quản lý vân tay"** $\rightarrow$ Bấm **"Đăng ký"** tại Slot mong muốn.
+* **Cách 2: Trực quan qua Web Controller:**
+  * Truy cập [https://touch.mrold.xyz/](https://touch.mrold.xyz/) $\rightarrow$ Kết nối tinyTouch.
+  * Bấm **"👆 Quét ngón"** để nạp vân tay cho Slot 2, 3, 4, 5.
+  * Bấm **"🔑 Đặt pass"** để lưu trực tiếp mật khẩu độc lập của từng ngón lên chip.
+* **Cách 3: Bằng dòng lệnh CLI:**
+  1. Xem danh sách 5 khe: `./tinytouch slots`
+  2. Đăng ký ngón mới: `./tinytouch enroll 2`
+  3. Đặt mật khẩu riêng: `./tinytouch set-password 2`
+  4. Xóa mật khẩu riêng: `./tinytouch clear-password 2`
 
 ---
 
@@ -361,5 +382,3 @@ curl -sL https://github.com/mr-old-youtube/MrOld-touch/releases/latest/download/
 
 #### 4. Thiết bị có lưu mật khẩu của tôi an toàn không?
 > 🛡️ **Tuyệt đối an toàn!** Mật khẩu được mã hóa phần cứng chuẩn **XTS-AES 256-bit** trực tiếp trong bộ nhớ Flash của chip. Kể cả khi có người tháo rời cảm biến hoặc can thiệp vật lý cũng không thể đọc trộm được mật khẩu.
-
-
